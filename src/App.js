@@ -9,6 +9,10 @@ import Alert from "./components/Alert";
 
 // let name = "Madhur";
 function App() {
+  if (localStorage.getItem("mode") == null) {
+    localStorage.setItem("mode", "light");
+  }
+  
   const [mode, setMode] = useState(localStorage.getItem("mode"));
   const [alert, setAlert] = useState(null);
 
